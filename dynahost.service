@@ -1,0 +1,15 @@
+# Dynamic host service
+
+[Unit]
+Description=Dynamic host service
+After=syslog.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/dynahost
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
